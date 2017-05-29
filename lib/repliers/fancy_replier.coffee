@@ -2,41 +2,22 @@ _ = require("underscore")
 
 sassyMessages = [
 
-  # English
-  ["us", "Just a second"]
-  ["us", "Thinking"]
-  ["ca", "On it"]
-  ["us", "Working on it"]
-  ["gb", "Queueing"]
-  ["gb", "Having a think"]
-  ["ca", "One moment please"]
-  ["in", "Give me a minute"]
-  ["pk", "Hold on"]
-  ["ng", "Looking into it"]
-  ["ph", "One sec"]
-  ["ph", "Working it out"]
-  ["us", "Hold please"]
-  ["eg", "Wait a moment"]
-  ["eg", "Hmm"]
-
-  # Cooler Languages
-  ["es", "Un momento, por favor"]
-  ["mx", "Por favor espera"]
-  ["de", "Bitte warten Sie einen Augenblick"]
-  ["jp", "お待ちください"]
+  # Portuguese
+  ["ca", "Um minutinho"]
+  ["ca", "Já ta chegando..."]
+  ["ca", "Coletando os dados"]
+  ["ca", "Deixa eu ver..."]
+  ["ca", "Um instante"]
+  ["ca", "Espere um minuto"]
+  ["ca", "Um pouco de paciência"]
+  ["ca", "Give me a minute"]
+  ["ca", "Vou ver aqui para você"]
+  ["ca", "Pesquisando..."]
+  ["ca", "Por favor espere, caro Logger"]
+  ["ca", "Vamos ver os dados #DataDrivenLoggi"]
   ["ca", "Un moment s'il vous plait"]
-  ["cn", "稍等一會兒"]
-  ["nl", "Even geduld aub"]
-  ["so", "Ka shaqeeya waxaa ku"]
-  ["th", "กรุณารอสักครู่"]
-  ["ru", "один момент, пожалуйста"]
-  ["fi", "Hetkinen"]
-  ["ro", "Lucrez la asta"]
-  ["is", "Eitt andartak"]
-  ["az", "Bir dəqiqə zəhmət olmasa"]
-  ["ie", "Fán le do thoil"]
-  ["ne", "कृपया पर्खनुहोस्"]
-  ["in", "कृपया एक क्षण के लिए"]
+  ["ca", "Wait a moment"]
+  ["ca", "Hmm"]
 
 ].map(([country, message] = pair) ->
   translate = "https://translate.google.com/#auto/auto/#{encodeURIComponent(message)}"
