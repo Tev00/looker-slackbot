@@ -16,7 +16,7 @@ sassyMessages = [
   ["br", "Por favor espere, caro Logger"]
   ["br", "Vamos ver os dados #DataDrivenLoggi"]
   ["br", "Un moment s'il vous plait"]
-  ["br", "Wait a moment"]
+  ["br", "Dados chegando em 3..2...1..."]
   ["br", "Hmm"]
 
 ].map(([country, message] = pair) ->
