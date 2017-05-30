@@ -3,25 +3,25 @@ _ = require("underscore")
 sassyMessages = [
 
   # Portuguese
-  ["br", "Um minutinho"]
-  ["br", "Já ta chegando..."]
-  ["br", "Coletando os dados"]
-  ["br", "Deixa eu ver..."]
-  ["br", "Um instante"]
-  ["br", "Espere um minuto"]
-  ["br", "Um pouco de paciência"]
-  ["br", "Give me a minute"]
-  ["br", "Vou ver aqui para você"]
-  ["br", "Pesquisando..."]
-  ["br", "Por favor espere, caro Logger"]
-  ["br", "Vamos ver os dados #DataDrivenLoggi"]
-  ["br", "Un moment s'il vous plait"]
-  ["br", "Dados chegando em 3..2...1..."]
-  ["br", "Hmm"]
+  ["loading", "Um minutinho"]
+  ["flag-br", "Já ta chegando..."]
+  ["blue-lebre", "Coletando os dados"]
+  ["loading", "Deixa eu ver..."]
+  ["loading", "Um instante"]
+  ["loading", "Espere um minuto"]
+  ["loading", "Um pouco de paciência"]
+  ["tada", "Dados no caminho..."]
+  ["loading", "Vou ver aqui para você"]
+  ["loading", "Pesquisando..."]
+  ["blue-lebre", "Por favor espere, caro Logger"]
+  ["blue-lebre", "Vamos ver os dados #DataDrivenLoggi"]
+  ["carlton", "Un moment s'il vous plait"]
+  ["tada", "Dados chegando em 3..2...1..."]
+  ["loading", "Hmm"]
 
-].map(([country, message] = pair) ->
+].map(([loading, message] = pair) ->
   translate = "https://translate.google.com/#auto/auto/#{encodeURIComponent(message)}"
-  "<#{translate}|:flag-#{country}:> _#{message}..._"
+  "<#{translate}|:{loading}:> _#{message}..._"
 )
 
 module.exports = class FancyReplier
