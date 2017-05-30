@@ -21,7 +21,7 @@ sassyMessages = [
 
 ].map(([loading, message] = pair) ->
   translate = "https://translate.google.com/#auto/auto/#{encodeURIComponent(message)}"
-  "<#{translate}|:#{loading:> _#{message}..._"
+  "<#{translate}|:#{loading}:> _#{message}..._"
 )
 
 module.exports = class FancyReplier
