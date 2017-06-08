@@ -34,7 +34,7 @@ module.exports = class QueryRunner extends FancyReplier
               image_url: url
               title: if @showShareUrl() then @linkText(query.share_url) else ""
               title_link: if @showShareUrl() then @linkUrl(query.share_url) else ""
-              color: "#64518A"
+              color: "#00BAFF"
             })
           ]
           text: ""
@@ -119,13 +119,13 @@ module.exports = class QueryRunner extends FancyReplier
       datum = result.data[0]
       rendered = renderField(field, datum)
       text = "*#{rendered}*#{share}"
-      attachment = {text: text, fallback: rendered, color: "#64518A", mrkdwn_in: ["text"]}
+      attachment = {text: text, fallback: rendered, color: "#00BAFF", mrkdwn_in: ["text"]}
       addSlackButtons(field, datum, attachment)
       @reply({attachments: [attachment]})
 
     else if result.data.length == 1 || query.vis_config?.type == "looker_single_record"
       attachment = _.extend({}, options, {
-        color: "#64518A"
+        color: "#00BAFF"
         fallback: shareUrl
         fields: renderableFields.map((m) ->
           rendered = renderField(m, result.data[0])
@@ -136,7 +136,7 @@ module.exports = class QueryRunner extends FancyReplier
       @reply(attachments: [attachment])
 
     else
-      attachment = _.extend({color: "#64518A"}, options, {
+      attachment = _.extend({color: "#00BAFF"}, options, {
         title: renderableFields.map((f) -> renderFieldLabel(f)).join(" – ")
         text: result.data.map((d) ->
           renderableFields.map((f) -> renderField(f, d)).join(" – ")
