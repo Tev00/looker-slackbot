@@ -25,7 +25,7 @@ module.exports = class HelpCommand extends Command
         helpAttachments.push(
           title: groupName
           text: groupText
-          color: "#64518A"
+          color: "#00BAFF"
           mrkdwn_in: ["text"]
         )
 
@@ -39,7 +39,7 @@ module.exports = class HelpCommand extends Command
     helpAttachments.push(
       title: "Built-in Commands"
       text: defaultText
-      color: "#64518A"
+      color: "#00BAFF"
       mrkdwn_in: ["text"]
     )
 
